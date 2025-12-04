@@ -6,7 +6,9 @@ gross_pay= hours_worked* hourly_rate
 
 
 #calculate tax
-
+if hours_worked < 0 or hourly_rate < 0:    #gives error message on -ve hours and rate entry 
+    print("Error: hours and rate must be positive numbers.")
+    exit()
 if gross_pay <= 15600:
     tax = gross_pay * 10.5 / 100       # 10.5% tax for 0-15600
 elif gross_pay <= 53500:
