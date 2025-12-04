@@ -1,8 +1,3 @@
-
-# Week 2 - Activity 4.2
-# Description: Using a class with objects to calculate factorial and Fibonacci series
-# and print the entire Fibonacci sequence
-
 class MathSeries:
     # Recursive method to calculate factorial of a number
     def factorial_recursive(self, n):
@@ -38,8 +33,6 @@ if __name__ == "__main__":
     # Call factorial method using object
     print("Factorial (recursive):", obj.factorial_recursive(n))
 
-    # Call nth Fibonacci method using object
-    print("Fibonacci (recursive) for position", n, ":", obj.fibonacci_recursive(n))
 
     # Call Fibonacci sequence method using object to print entire series
     print("Fibonacci sequence up to position", n, ":", obj.fibonacci_sequence(n))
