@@ -16,12 +16,20 @@ class Filereader:
         else:
             print("No data to count. Please read the file first.")
 
-def main():
+    def append(self):
+        f=open(self.filename,"a",encoding="utf-8")
+        f.write("End of File")
+        print("Text added successfully")
+        f.close()
 
+    
+def main():
         # Usage
     reader = Filereader("demo_file.txt")
     reader.read_and_write()  # Read and print file
     reader.count()           # Count '*' characters
-        
+    reader.append()
+    
+    
 if __name__ == "__main__":
     main()
