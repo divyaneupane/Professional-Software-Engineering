@@ -1,28 +1,26 @@
 class Filereader:
     def __init__(self, filename):
         self.filename = filename
-        self.data = ""  # initialize
+        self.data = ""
 
     def read_and_write(self):
-        f = open(self.filename, "r", encoding="utf-8")
-        self.data = f.read()  # store in self.data
+        with open(self.filename, "r", encoding="utf-8") as f:
+            self.data = f.read()
+        print("File content:\n")
         print(self.data)
-        f.close()
 
     def count(self):
         if self.data:
-            star_count = self.data.count('*')  # count '*' characters
+            star_count = self.data.count('*')
             print(f"\nNumber of '*' characters: {star_count}")
         else:
             print("No data to count. Please read the file first.")
 
     def append(self):
-        f=open(self.filename,"a",encoding="utf-8")
-        f.write("End of File")
-        print("Text added successfully")
-        f.close()
+        with open(self.filename, "a", encoding="utf-8") as f:
+            f.write("\n--- End of File ---\n")
+        print("Text added successfully!")
 
-    
 def main():
         # Usage
     reader = Filereader("demo_file.txt")
