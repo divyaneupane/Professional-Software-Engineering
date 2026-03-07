@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% comment %} <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Flask Web App</title>
+    <title>Flask Web App Home</title>
 </head>
 <body>
-    <h1>Welcome to Flask!</h1>
-    <button id="alertBtn">Click Me</button>
+    <h1>Welcome to Flask Web App</h1>
+    <p>Click the link below to load an image:</p>
+    <a href="/show-image">Load Image</a>
 
-    <script src="/static/script.js"></script>
+    <h2>Other Routes</h2>
+    <ul>
+        <li><a href="/bye">Go to Bye Page</a></li>
+        <li><a href="/username/Divya">Greet Divya</a></li>
+        <li><a href="/Divya/12">Divya + Number</a></li>
+    </ul>
 </body>
-</html>
+</html> {% endcomment %}
