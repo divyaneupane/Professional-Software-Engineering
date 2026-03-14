@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BMI Calculator</title>
+    <title>BMI Calculator & Plan</title>
 </head>
 <body>
     <h1>BMI Calculator</h1>
@@ -9,12 +9,17 @@
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Calculate BMI</button>
+        <button type="submit">Calculate BMI & Generate Plan</button>
     </form>
 
     {% if result %}
         <h2>Your BMI: {{ result }}</h2>
         <h3>Category: {{ category }}</h3>
+    {% endif %}
+
+    {% if plan %}
+        <h2>Personalized 1-Month Diet & Exercise Plan:</h2>
+        <pre>{{ plan }}</pre>
     {% endif %}
 </body>
 </html>
